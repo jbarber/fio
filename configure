@@ -1329,7 +1329,7 @@ cat > $TMPC << EOF
 
 int main(int argc, char **argv)
 {
-  return glfs_discard_async(NULL, 0, 0);
+  return glfs_discard_async(NULL, 0, 0, NULL, NULL);
 }
 EOF
 if compile_prog "" "-lgfapi -lglusterfs" "gf trim"; then
